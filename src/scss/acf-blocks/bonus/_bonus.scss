@@ -1,0 +1,86 @@
+@use "../../components/button/button";
+@use "../../base/image-func";
+
+.bonus {
+  $this:&;
+  --background-bonus: #f3f3f3;
+  --color-bonus: #000;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: 1fr;
+  gap: 20px;
+  border-radius: 20px;
+  padding: 20px;
+  //padding-top: 140px;
+  max-width: 328px;
+  background: var(--background-bonus, #f0f8ff);
+  position: relative;
+  margin: 0 auto;
+  margin-top: 46px;
+  color: var(--color-bonus);
+
+  &#{$this}_horizontal {
+    --color-bonus: #fff;
+    grid-template-areas:
+      "text icon"
+      "button button";
+
+    .icon {
+      grid-area: icon;
+      margin: 0;
+      @include image-func.sizeImage(90px, 90px);
+    }
+
+    .bonus__info {
+      display: flex;
+      align-items: center;
+      grid-area: text;
+      font-family: Arial;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 150%;
+      margin-right: -16px;
+
+      p {
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 150%;
+      }
+    }
+
+    .bonus-buttons {
+      grid-area: button;
+    }
+  }
+
+  .icon {
+    margin: 0 auto;
+    margin-top: -66px;
+    margin-bottom: -5px;
+    @include image-func.sizeImage(170px, 170px);
+  }
+
+  &__info {
+    font-family: Arial;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+
+    p {
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 150%;
+      margin: 0;
+    }
+
+    strong {
+      --accent-color: #E48B01;
+      color: var(--accent-color);
+      font-weight: 700;
+    }
+  }
+}

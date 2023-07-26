@@ -1,0 +1,16 @@
+//$accent-color: #681524;
+
+:root {
+  --offsets: 64px;
+
+  @media (max-width: 600px) {
+    --offsets: 16px;
+  }
+  --section-offsets: 48px;
+
+  @media (max-width: 600px) {
+    --section-offsets: 32px;
+  }
+  --opacity-bg: 1;
+  --accent-color: rgb(104 21 36 / var(--opacity-bg));
+}

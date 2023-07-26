@@ -1,0 +1,40 @@
+@use "../../base/image-func";
+
+.button {
+  --buttons-background: #FDDD04;
+  --buttons-padding: 8px;
+  --buttons-color-text: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--buttons-padding);
+  border: none;
+  border-radius: 40px;
+  color: var(--buttons-color-text);
+  background: var(--buttons-background);
+  font-size: 16px;
+  line-height: normal;
+  font-family: Inter, sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  max-width: var(--button-width, 100%);
+  position: relative;
+  transition: 0.25s;
+  cursor: pointer;
+  justify-self: var(--position-btn);
+  flex-direction: row-reverse;
+  width: var(--button-width, 100%);
+
+  &:hover,
+  &:focus {
+    color: var(--buttons-color-hover);
+    background: var(--buttons-background-hover);
+  }
+
+  &__image {
+    @include image-func.sizeImage(25px, 25px);
+    background-size: 100%;
+    background-position: center;
+    margin-left: 15px;
+  }
+}
