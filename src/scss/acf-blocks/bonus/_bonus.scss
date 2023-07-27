@@ -14,8 +14,7 @@
   max-width: 328px;
   background: var(--background-bonus, #f0f8ff);
   position: relative;
-  margin: 0 auto;
-  margin-top: 46px;
+  margin: 46px auto 0;
   color: var(--color-bonus);
 
   &_horizontal {
@@ -34,11 +33,8 @@
       display: flex;
       align-items: center;
       grid-area: text;
-      font-family: Arial;
       font-size: 15px;
-      font-style: normal;
       font-weight: 700;
-      line-height: 150%;
       margin-right: -16px;
 
       p {
@@ -55,14 +51,11 @@
   }
 
   &__icon {
-    margin: 0 auto;
-    margin-top: -66px;
-    margin-bottom: -5px;
+    margin: -66px auto -5px;
     @include image-func.sizeImage(170px, 170px);
   }
 
   &__info {
-    font-family: Arial;
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
