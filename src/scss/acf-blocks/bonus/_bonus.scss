@@ -1,7 +1,7 @@
 @use "../../components/button/button";
 @use "../../base/image-func";
 
-.bonus {
+.bonus-activate {
   $this:&;
   --background-bonus: #f3f3f3;
   --color-bonus: #000;
@@ -11,7 +11,6 @@
   gap: 20px;
   border-radius: 20px;
   padding: 20px;
-  //padding-top: 140px;
   max-width: 328px;
   background: var(--background-bonus, #f0f8ff);
   position: relative;
@@ -19,19 +18,19 @@
   margin-top: 46px;
   color: var(--color-bonus);
 
-  &#{$this}_horizontal {
+  &_horizontal {
     --color-bonus: #fff;
     grid-template-areas:
       "text icon"
       "button button";
 
-    .icon {
+    #{$this}__icon {
       grid-area: icon;
       margin: 0;
       @include image-func.sizeImage(90px, 90px);
     }
 
-    .bonus__info {
+    #{$this}__info {
       display: flex;
       align-items: center;
       grid-area: text;
@@ -50,12 +49,12 @@
       }
     }
 
-    .bonus-buttons {
+    #{$this}__buttons {
       grid-area: button;
     }
   }
 
-  .icon {
+  &__icon {
     margin: 0 auto;
     margin-top: -66px;
     margin-bottom: -5px;
